@@ -1,6 +1,7 @@
 require 'sinatra'
 require 'sinatra/activerecord'
 require './environments'
+require 'json'
 
 class User < ActiveRecord::Base
 end
@@ -14,10 +15,10 @@ end
 
 class API < Sinatra::Base
   get '/users' do
-    # return all user info
+    User.all.to_json
   end
 
   get '/users/:id' do
-    # return specific person info
+    User.find(params[:id]).to_json
   end
 end
