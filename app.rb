@@ -1,4 +1,9 @@
 require 'sinatra'
+require 'sinatra/activerecord'
+require './environments'
+
+class User < ActiveRecord::Base
+end
 
 
 class Web < Sinatra::Base
