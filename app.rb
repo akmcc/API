@@ -32,6 +32,16 @@ class API < Sinatra::Base
     user.save
   end
 
+  put '/users/:id' do
+    user = User.find(params[:id])
+    user.name = params[:name]
+    user.email = params[:email]
+    user.phone = params[:phone]
+    user.occupation = params[:occupation]
+    user.age = params[:age]
+    user.save
+  end
+
   delete '/users/:id' do
     user = User.find(params[:id])
     user.delete
