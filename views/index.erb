@@ -3,5 +3,22 @@
 </head>
 <body>
   <h1>Users</h1>
+  <div class='centered-button'>
+    <button class='add-new-user'>Add new</button>
+  </div>
+  <div>
+    <form class='new-user-form'>
+      <label>Name</label> <input name='name'/>
+      <label>Email</label> <input name='email'/>
+      <label>Phone</label> <input name='phone'/>
+      <label>Occupation</label> <input name='occupation'/>
+      <label>Age</label> <input name='age' />  
+      <input class='save-new-user' type='submit' value='Save' />
+    </form>
+  </div>
+  <div class='user-list'></div>
+
+  <script type="text/javascript" src='jquery.js'></script>
+  <script type="text/javascript" src='main.js'></script>
 </body>
 </html>
