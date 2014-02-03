@@ -31,4 +31,10 @@ class API < Sinatra::Base
     user.age = params[:age].to_i
     user.save
   end
+
+  delete '/users/:id' do
+    user = User.find(params[:id])
+    user.delete
+  end
+
 end 
